@@ -43,7 +43,26 @@ class TodoListViewController: UITableViewController {
         } else {
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark // Si no tiene un check, entonces le ponemos el check cuando el usuario hace un tap en la fila
         }
+    }
+    
+    
+    //MARK: - Agregar nuevos items a la fila (lista de cosas)
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) { // Cuando se presiona el botón + de arriba a la derecha para agregar
+    
+        let alert = UIAlertController(title: "Agregar nuevo item", message: "", preferredStyle: .alert)
         
+        let action = UIAlertAction(title: "Agregar", style: .default) { (action) in
+            // Lo que sucede cuando el usuario da click en agregar item al boton en el alert
+        }
+    
+//        alert.addTextField { (<#UITextField#>) in
+//            //
+//        }
+//
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
         
     }
     
